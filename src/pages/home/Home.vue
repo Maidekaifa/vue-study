@@ -1,15 +1,12 @@
 <template>
-  <div id="app">
-    hello
-  </div>
+  <div>home</div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Home'
 }
 </script>
 
 <style>
-
 </style>
