@@ -2,7 +2,7 @@
     <div class="wrapper">
         <swiper :options="swiperOption">
             <swiper-slide  v-for="items of swiperList" :key='items.id'>
-               <img :src="items.imgurl" />
+               <img :src="items.imgurl" alt="轮播图" />
             </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
@@ -16,6 +16,9 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
+        autoplay: 3000,
+        speed: 1000,
+        autoplayDisableOnInteraction: false,
         loop: true
       },
       swiperList: [
