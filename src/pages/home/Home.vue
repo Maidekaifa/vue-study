@@ -1,6 +1,6 @@
 <template>
   <div>
-      <!--主页部分-->
+      <!--首页部分-->
       <home-header></home-header>
       <home-swiper></home-swiper>
       <home-icons></home-icons>
@@ -24,5 +24,5 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="icons">
-<!--*****************************这是一个首页图标菜单的组件**************************-->
+<!--*****************************这是一个首页图标菜单可滑动的组件**************************-->
       <swiper :options="swiperOption">
         <swiper-slide v-for="(page,index) of pages" :key="index">
             <div class="icon" v-for="item of page" :key="item.id">
@@ -92,7 +92,7 @@ line-height: .44rem;
 text-align: center;
 color: $darkTextColor;
 font-size: 12px;
-font-family: "blackadder itc";
+font-family: "楷体";
 overflow: hidden;
 white-space: nowrap;
 text-overflow: ellipsis;
