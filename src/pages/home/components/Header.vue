@@ -14,6 +14,7 @@ export default {
 
 <style scoped>
 .header{
+width: 100%;
 display: flex;
 line-height: .86rem;
 background: #00bcd4;

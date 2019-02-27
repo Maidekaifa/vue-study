@@ -92,7 +92,7 @@ line-height: .44rem;
 text-align: center;
 color: $darkTextColor;
 font-size: 12px;
-font-family: "楷体";
+font-family: "agency fb";
 overflow: hidden;
 white-space: nowrap;
 text-overflow: ellipsis;
