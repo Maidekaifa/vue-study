@@ -14,7 +14,7 @@
             </div>
         </li>
     </ul>
-    <p class="item-p"><a class="item-a" href="#">查看全部推荐</a></p>
+    <p class="item-p"><a class="item-a" href="#">查看全部景点</a></p>
 </div>
 </template>
 

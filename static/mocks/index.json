@@ -1,0 +1,112 @@
+{
+  "ret": true,
+  "data": {
+    "swiperList": [{
+        "id": "0001",
+        "imgUrl": "../../../../static/imgs/home_banner_1.jpg"
+      },{
+        "id": "0002",
+        "imgUrl": "../../../../static/imgs/home_banner_2.jpg"
+      },{
+        "id": "0003",
+        "imgUrl": "../../../../static/imgs/home_banner_3.jpg"
+      },{
+        "id": "0004",
+        "imgUrl": "../../../../static/imgs/home_banner_4.jpg"
+      }],
+    "iconList": [{
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+        "desc": "景点门票"
+      }, {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1711/df/86cbcfc533330d02.png",
+        "desc": "滑雪季"
+      }, {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1710/a6/83f636bd75ae6302.png",
+        "desc": "泡温泉"
+      }, {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/35/2640cab202c41b02.png",
+        "desc": "动植园"
+      }, {
+        "id": "0005",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/d0/e09575e66f4aa402.png",
+        "desc": "游乐园"
+      }, {
+        "id": "0006",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/59/569d3c096e542502.png",
+        "desc": "必游榜单"
+      }, {
+        "id": "0007",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/17/4bd370f3eb1acd02.png",
+        "desc": "演出"
+      }, {
+        "id": "0008",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/7f/b1ea3c8c7fb6db02.png",
+        "desc": "城市观光"
+      }, {
+        "id": "0009",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/a9/ffc620dbda9b9c02.png",
+        "desc": "一日游"
+      }],
+    "recommendList": [{
+        "id": "0001",
+        "imgUrl": "https://imgs.qunarzz.com/p/tts3/1806/ce/69a4638786138902.jpg_160x160_34d87685.jpg",
+        "title": "广州岭南纯玩一日游（9大景点/2个正餐/全程导服/旅游大巴）",
+        "desc": "出发地：广州"
+      }, {
+        "id": "0002",
+        "imgUrl": "https://imgs.qunarzz.com/p/tts3/1811/cb/906065befeb09102.jpg_160x160_64869f56.jpg",
+        "title": "【春季钜惠价休闲团】增城白水寨风景名胜区直通车纯玩一日游",
+        "desc": "出发地：广州"
+      }, {
+        "id": "0003",
+        "imgUrl": "https://imgs.qunarzz.com/p/tts9/1803/eb/ab21dece1058d502.jpg_160x160_8e23825b.jpg",
+        "title": "【7-10-12点】纯玩八达岭长城+往返直通车，门票午餐可选",
+        "desc": "出发地：北京"
+      }, {
+        "id": "0004",
+        "imgUrl": "https://imgs.qunarzz.com/p/tts8/1901/e8/a3a86dd03bb01702.jpg_160x160_dcc8ea59.jpg",
+        "title": "【可订当天】10-12点懒游晚起-八达岭长城自助漫游1日游",
+        "desc": "出发地：北京"
+      }, {
+        "id": "0005",
+        "imgUrl": "https://imgs.qunarzz.com/p/tts0/1708/b0/29f1a343e085fb02.jpg_160x160_cdca4083.jpg",
+        "title": "门票全含，游艇出海环岛+世界之窗或锦绣中华+地王+中英街一日",
+        "desc": "出发地：深圳"
+      },{
+        "id": "0006",
+        "imgUrl": "https://imgs.qunarzz.com/p/tts0/1811/77/015af429e32e1202.jpg_160x160_0f385543.jpg",
+        "title": "深圳/香港—车行港珠澳大桥+澳门深度美食纯玩1天，大三巴牌坊",
+        "desc": "出发地：深圳"
+      }],
+    "weekendList": [{
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg",
+        "title": "北京温泉排行榜",
+        "desc": "细数北京温泉，温暖你的冬天"
+      }, {
+        "id": "0002",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/aa/7baaf8a851d221.jpg_r_640x214_1431200f.jpg",
+        "title": "北京必游TOP10",
+        "desc": "来北京必去的景点非这些地方莫属"
+      }, {
+        "id": "0003",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
+        "title": "寻找北京的皇城范儿",
+        "desc": "数百年的宫廷庙宇，至今依旧威严霸气"
+      }, {
+        "id": "0004",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/ce/bc89bc2f0e33ea.jpg_r_640x214_3e408453.jpg",
+        "title": "学生最爱的博物馆",
+        "desc": "周末干嘛？北京很多博物馆已经免费开放啦"
+      }, {
+        "id": "0005",
+        "imgUrl": "http://img1.qunarzz.com/sight/source/1505/b2/fde1bfcd057a52.jpg_r_640x214_bbf3fa44.jpg",
+        "title": "儿童剧场，孩子的乐园",
+        "desc": "带宝贝观看演出，近距离体验艺术的无穷魅力"
+      }]
+  }
+}
