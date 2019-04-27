@@ -44,7 +44,7 @@ export default {
       if (res.ret && res.data) {
         const data = res.data
         this.city = data.city
-        console.log('判断执行成功')
+        // console.log(data)
       }
     }
   },

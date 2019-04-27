@@ -1,6 +1,7 @@
 {
   "ret": true,
   "data": {
+		"city":"广州",
     "swiperList": [{
         "id": "0001",
         "imgUrl": "../../../../static/imgs/home_banner_1.jpg"

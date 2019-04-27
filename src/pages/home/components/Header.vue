@@ -2,7 +2,9 @@
 <div class="header">
     <div class="header-left"><div class="iconfont back-icon">&#xe601;</div></div>
     <div class="header-mid"><span class="iconfont">&#xe644;</span>输入城市/景点/游玩主题</div>
-    <div class="header-right">{{this.city}}<span class="iconfont download-icon">&#xe64a;</span></div>
+    <router-link to="/city">
+      <div class="header-right">{{this.city}}<span class="iconfont download-icon">&#xe64a;</span></div>
+    </router-link>
 </div>
 </template>
 
@@ -38,6 +40,10 @@ border-radius: .1rem;
 color: #CCCCCC;
 line-height: .64rem;
 padding-left: .2rem;
+color: #fff;
+}
+a{
+color: #fff;
 }
 .header-right{
 width: 1.24rem;
