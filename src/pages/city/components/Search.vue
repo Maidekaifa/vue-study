@@ -13,7 +13,7 @@ export default{
 <style>
 .search{
 height: .72rem;
-padding: 0 .1rem;
+padding: 0.1rem;
 background: #00BCD4;
 }
 .search .search-input{
@@ -23,7 +23,7 @@ width: 100%;
 text-align: center;
 border-radius: .06rem;
 color: #666;
-padding: 0 .1rem;
+padding: 0.1rem;
 box-sizing: border-box;
 }
 </style>

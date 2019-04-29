@@ -47,6 +47,7 @@
             <div class="item border-bottom">阿拉尔</div>
             <div class="item border-bottom">阿拉尔</div>
           </div>
+          <div class="title border-topbottom">B</div>
           <div class="item-list">
             <div class="item border-bottom">阿拉尔</div>
             <div class="item border-bottom">阿拉尔</div>
@@ -55,6 +56,7 @@
             <div class="item border-bottom">阿拉尔</div>
             <div class="item border-bottom">阿拉尔</div>
           </div>
+          <div class="title border-topbottom">C</div>
           <div class="item-list">
             <div class="item border-bottom">阿拉尔</div>
             <div class="item border-bottom">阿拉尔</div>
