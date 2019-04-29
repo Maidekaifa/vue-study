@@ -67,6 +67,7 @@ float: left;
 height: 0;
 width: 25%;
 padding-bottom: 25%;
+/* 宽高比自适应,防止图片没加载时,图片下方的内容移到上方 */
 }
 .icons .icon .icon-img{
 position: absolute;
