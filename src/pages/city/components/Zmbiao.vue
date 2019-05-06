@@ -1,7 +1,15 @@
 <template>
   <div class="zimubiao">
     <ul class="list-zimu">
-      <li class="item" v-for="(item,key) in cities" :key="item.id">{{key}}</li>
+      <li class="item"
+        @click="handleLetterClick"
+        @touchstart="handleTouchstart"
+        @touchmove="handleTouchmove"
+        @touchend="handleTouchend"
+        v-for="(item,key) in cities" :key="item.id"
+        >
+      {{key}}
+      </li>
     </ul>
   </div>
 </template>
@@ -11,6 +19,21 @@ export default{
   name: 'Zimubiao',
   props: {
     cities: Object
+  },
+  methods: {
+    handleLetterClick (e) {
+      this.$emit('change', e.target.innerText)
+      // 子组件向外触发事件
+    },
+    handleTouchstart () {
+        console.log(1)
+    },
+    handleTouchmove () {
+        console.log(2)
+    },
+    handleTouchend () {
+        console.log(3)
+    }
   }
 }
 </script>

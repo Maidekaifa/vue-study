@@ -3,8 +3,8 @@
     <div><!--父组件数据传给子组件-->
       <CityHeader></CityHeader>
       <CitySearch></CitySearch>
-      <CityList :cities='cities' :hot='hotCities'></CityList>
-      <CityZimu :cities='cities'></CityZimu>
+      <CityList :letter='letter' :cities='cities' :hot='hotCities'></CityList>
+      <CityZimu :cities='cities' @change="handleLetterchange"></CityZimu>
     </div>
   </div>
 </template>
@@ -26,7 +26,8 @@ export default{
   data () {
     return {
       cities: {},
-      hotCities: []
+      hotCities: [],
+      letter: ''
     }
   },
   mounted () {
@@ -44,8 +45,12 @@ export default{
         const data = res.data
         this.cities = data.cities
         this.hotCities = data.hotCities
-        console.log(this.hotCities)
+        // console.log(this.hotCities)
       }
+    },
+    handleLetterchange (letter) {
+      // console.log(letter)
+      this.letter = letter
     }
   }
 }
