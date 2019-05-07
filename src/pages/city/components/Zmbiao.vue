@@ -6,9 +6,9 @@
         @touchstart="handleTouchstart"
         @touchmove="handleTouchmove"
         @touchend="handleTouchend"
-        v-for="(item,key) in cities" :key="item.id"
+        v-for="item in letters" :key="item" :ref="item"
         >
-      {{key}}
+      {{item}}
       </li>
     </ul>
   </div>
@@ -20,19 +20,44 @@ export default{
   props: {
     cities: Object
   },
+  data () {
+    return {
+      touchstatus: false
+    }
+  },
+  computed: {
+    letters () {
+      const letters = []
+      for (let i in this.cities) {
+        letters.push(i)
+      }
+      return letters
+    }
+  },
   methods: {
     handleLetterClick (e) {
       this.$emit('change', e.target.innerText)
       // 子组件向外触发事件
     },
     handleTouchstart () {
-        console.log(1)
+      this.touchstatus = true
     },
-    handleTouchmove () {
-        console.log(2)
+    handleTouchmove (e) {
+      if (this.touchstatus) {
+        const startY = this.$refs['A'][0].offsetTop// A距离顶部的距离
+        // console.log(startY)
+        const touchY = e.touches[0].clientY - 89// 手指距离顶部的距离  顶部蓝色区域总高度43+46px
+        // console.log(touchY)
+        // 获取字母下标   （手距离搜索框顶部的距离-A距离顶部的距离）=手滑动的距离   然后手滑动的距离÷字母高度=字母下标
+        const indexs = Math.floor((touchY - startY) / 20)
+        // console.log(indexs)
+        if (indexs >= 0 && indexs < this.letters.length) {
+          this.$emit('change', this.letters[indexs])
+        }
+      }
     },
     handleTouchend () {
-        console.log(3)
+      this.touchstatus = false
     }
   }
 }
