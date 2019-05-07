@@ -22,8 +22,13 @@ export default{
   },
   data () {
     return {
-      touchstatus: false
+      touchstatus: false,
+      startY: 0,
+      timer: null
     }
+  },
+  updated () {
+    this.startY = this.$refs['A'][0].offsetTop
   },
   computed: {
     letters () {
@@ -44,16 +49,21 @@ export default{
     },
     handleTouchmove (e) {
       if (this.touchstatus) {
-        const startY = this.$refs['A'][0].offsetTop// A距离顶部的距离
-        // console.log(startY)
-        const touchY = e.touches[0].clientY - 89// 手指距离顶部的距离  顶部蓝色区域总高度43+46px
-        // console.log(touchY)
-        // 获取字母下标   （手距离搜索框顶部的距离-A距离顶部的距离）=手滑动的距离   然后手滑动的距离÷字母高度=字母下标
-        const indexs = Math.floor((touchY - startY) / 20)
-        // console.log(indexs)
-        if (indexs >= 0 && indexs < this.letters.length) {
-          this.$emit('change', this.letters[indexs])
+        if (this.timer) { // 为了提高函数的性能  做*****函数节流******
+          clearTimeout(this.timer)
         }
+        this.timer = setTimeout(() => {
+          // const startY = this.$refs['A'][0].offsetTop// A距离顶部的距离  为了提高性能，把startY在渲染页面之后直接算出来
+          // console.log(startY)
+          const touchY = e.touches[0].clientY - 89// 手指距离顶部的距离  顶部蓝色区域总高度43+46px
+          // console.log(touchY)
+          // 获取字母下标   （手距离搜索框顶部的距离-A距离顶部的距离）=手滑动的距离   然后手滑动的距离÷字母高度=字母下标
+          const indexs = Math.floor((touchY - this.startY) / 20)
+          // console.log(indexs)
+          if (indexs >= 0 && indexs < this.letters.length) {
+            this.$emit('change', this.letters[indexs])
+          }
+        }, 16)
       }
     },
     handleTouchend () {
