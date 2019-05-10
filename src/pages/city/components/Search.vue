@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="search">
-        <input v-model="keyword" class="search-input" type="text" placeholder="请输入城市名或拼音" />
+        <input :v-model="keyword" class="search-input" type="text" placeholder="请输入城市名或拼音" />
     </div>
     <div class="search-content">
       <ul class="search-list">
@@ -25,7 +25,7 @@ export default{
     cities: Object
   },
   watch: {
-  	keyword () {
+    keyword () {
       if (this.timer) {
         clearTimeout(this.timer)
       }
@@ -34,14 +34,14 @@ export default{
         for (let i in this.cities) {
           this.cities[i].forEach((value) => {
             if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
-              result.push(value)	
+              result.push(value)
             }
           })
         }
         this.list = result
       }, 100)
     }
-  },
+  }
 }
 </script>
 
@@ -69,6 +69,12 @@ top: 1.77rem;
 left: 0;
 bottom: 0;
 z-index: 999;
-background: green;
+background: #eee;
+}
+.searchs{
+line-height: .62rem;
+padding-left: .2rem;
+background: #fff;
+color: #666;
 }
 </style>
