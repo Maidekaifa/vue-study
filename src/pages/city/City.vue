@@ -2,7 +2,7 @@
   <div class="city">
     <div><!--父组件数据传给子组件-->
       <CityHeader></CityHeader>
-      <CitySearch></CitySearch>
+      <CitySearch :cities='cities'></CitySearch>
       <CityList :letter='letter' :cities='cities' :hot='hotCities'></CityList>
       <CityZimu :cities='cities' @change="handleLetterchange"></CityZimu>
     </div>
