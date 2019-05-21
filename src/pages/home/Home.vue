@@ -1,7 +1,7 @@
 <template>
   <div>
       <!--首页部分-->
-      <home-header :city="city"><!--父组件向子组件传值，通过属性的形式--></home-header>
+      <home-header></home-header>
       <home-swiper></home-swiper>
       <home-icons></home-icons>
       <home-recommend></home-recommend>
