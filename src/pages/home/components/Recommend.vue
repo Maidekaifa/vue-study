@@ -2,7 +2,7 @@
 <div>
     <div class="recommend">热门推荐</div>
     <ul>
-        <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+        <router-link tag="li" class="item border-bottom" v-for="item of recommendList" :key="item.id" :to="'detail/'+item.id">
         <!--上面class类border-bottom用的就是处理1像素边框那CSS文件的-->
             <img class="item-img" :src="item.imgUrl" alt="img" />
             <div class="item-info">
@@ -10,7 +10,7 @@
                 <p class="item-desc">{{item.desc}}</p>
                 <button class="item-button">查看详情</button>
             </div>
-        </li>
+        </router-link>
     </ul>
     <p class="item-p"><a class="item-a" href="#">查看全部推荐</a></p>
 </div>
