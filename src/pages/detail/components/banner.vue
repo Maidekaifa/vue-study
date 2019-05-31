@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner" @click="show_commongallary">
-      <img src="../../../../static/imgs/banner4.jpg" />
+      <img src="../../../../static/imgs/banner1.jpg" />
       <div class="banner_info">
         <div class="banner_title">海南三亚(AAAA景区)</div>
         <div class="banner_number">
