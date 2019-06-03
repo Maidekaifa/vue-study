@@ -30,7 +30,7 @@ export default {
         opacity = opacity > 1 ? 1 : opacity
         this.opacitystyle = { opacity }
         this.headershow = false
-        console.log(opacity)
+        // console.log(opacity)
       } else {
         this.headershow = true
       }
