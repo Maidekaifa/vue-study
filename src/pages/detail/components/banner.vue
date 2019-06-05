@@ -1,15 +1,15 @@
 <template>
   <div>
     <div class="banner" @click="show_commongallary">
-      <img src="../../../../static/imgs/banner1.jpg" />
+      <img :src="bannerImg" />
       <div class="banner_info">
-        <div class="banner_title">海南三亚(AAAA景区)</div>
+        <div class="banner_title">{{sightName}}</div>
         <div class="banner_number">
-          <span class="iconfont banner_icon">&#xe670;</span>5
+          <span class="iconfont banner_icon">&#xe670;</span>{{this.gallaryImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="commongallary_show" @hidden="close_commongallary"></common-gallary>
+    <common-gallary :imgs="gallaryImgs" v-show="commongallary_show" @hidden="close_commongallary"></common-gallary>
   </div>
 </template>
 
@@ -19,9 +19,13 @@ export default {
   name: 'DetailBanner',
   data () {
     return {
-      commongallary_show: false,
-      imgs: ['../../../../static/imgs/banner1.jpg', '../../../../static/imgs/banner2.jpg', '../../../../static/imgs/banner3.jpg', '../../../../static/imgs/banner4.jpg', '../../../../static/imgs/banner5.jpg']
+      commongallary_show: false
     }
+  },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array
   },
   components: {
     CommonGallary

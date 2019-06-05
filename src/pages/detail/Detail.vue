@@ -1,7 +1,7 @@
 <template>
   <div>
     <DetailHeader></DetailHeader>
-    <DetailBanner></DetailBanner>
+    <DetailBanner :sightName="sightName" :bannerImg="bannerImg" :gallaryImgs="gallaryImgs"></DetailBanner>
     <DetailList :list="list"></DetailList>
     <div class="test"></div>
   </div>
@@ -11,8 +11,10 @@
 import DetailBanner from './components/banner.vue'
 import DetailHeader from './components/header.vue'
 import DetailList from './components/list.vue'
+import axios from 'axios'
 export default{
   name: 'Detail',
+  // 组件中的name主要3个用途：①递归组件②给某个页面取消缓存③vue调试工具的组件名字
   components: {
     DetailBanner,
     DetailHeader,
@@ -20,22 +22,31 @@ export default{
   },
   data () {
     return {
-      list: [{
-        title: '成人票',
-        children: [{
-          title: '成人三景点联票',
-          children: [{title: '（最下级）成人单票'}]
-        }, {
-          title: '成人五景点联票'
-        }]
-      }, {
-        title: '学生票'
-      }, {
-        title: '儿童票'
-      }, {
-        title: '特惠票'
-      }]
+      sightName: '',
+      bannerImg: '',
+      gallaryImgs: [],
+      list: []
     }
+  },
+  methods: {
+    getDetailInfo () {
+      axios.get('/api/detail.json?id=' + this.$route.params.id)
+        .then(this.handleGetSucc)
+    },
+    handleGetSucc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        // console.log(data)
+        this.sightName = data.sightName
+        this.bannerImg = data.bannerImg
+        this.gallaryImgs = data.gallaryImgs
+        this.list = data.categoryList
+      }
+    }
+  },
+  mounted () {
+    this.getDetailInfo()
   }
 }
 </script>
