@@ -1,9 +1,10 @@
 <template>
   <div class="zimubiao">
     <ul class="list-zimu">
+    <!--prevent方法用于阻止touch事件的-->
       <li class="item"
         @click="handleLetterClick"
-        @touchstart="handleTouchstart"
+        @touchstart.prevent="handleTouchstart"
         @touchmove="handleTouchmove"
         @touchend="handleTouchend"
         v-for="item in letters" :key="item" :ref="item"

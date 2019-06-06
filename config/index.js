@@ -10,7 +10,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {
+    proxyTable: { // 控制AJAX的请求地址，把域名换到Localhost那里去，pathRewrite删掉
 		'/api': {
 			target: 'http://localhost:8080',
 			pathRewrite: {
