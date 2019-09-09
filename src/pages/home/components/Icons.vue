@@ -91,7 +91,7 @@ bottom: 0;
 height: .44rem;
 line-height: .44rem;
 text-align: center;
-color: $darkTextColor;
+color: darkTextColor;
 font-size: 12px;
 font-family: "agency fb";
 overflow: hidden;
