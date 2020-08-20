@@ -1,14 +1,31 @@
 <template>
   <div>
     <div class="search">
-        <input v-model="keyword" class="search-input" type="text" placeholder="请输入城市名或拼音" />
+      <input
+        :v-model="keyword"
+        class="search-input"
+        type="text"
+        placeholder="请输入城市名或拼音"
+      />
     </div>
-    <div class="search-content" ref="searchs" v-show="keyword">
+    <div
+      class="search-content"
+      ref="searchs"
+      v-show="keyword"
+    >
       <ul class="search-list">
-        <li class="searchs border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">
+        <li
+          class="searchs border-bottom"
+          v-for="item of list"
+          :key="item.id"
+          @click="handleCityClick(item.name)"
+        >
           {{item.name}}
         </li>
-        <li class="searchs border-bottom" v-show="hasList">没有找到匹配的数据</li>
+        <li
+          class="searchs border-bottom"
+          v-show="hasList"
+        >没有找到匹配的数据</li>
       </ul>
     </div>
   </div>
@@ -16,27 +33,13 @@
 
 <script>
 import Bscroll from 'better-scroll'
-export default{
+export default {
   name: 'CitySearch',
   data () {
     return {
       keyword: '',
       list: [],
       timer: null
-    }
-  },
-  mounted () {
-    this.scroll = new Bscroll(this.$refs.searchs)
-  },
-  computed: {
-    hasList () {
-      return !this.list.length
-    }
-  },
-  methods: {
-    handleCityClick (city) {
-      this.$store.dispatch('changeCity', city)
-      this.$router.push('/')
     }
   },
   props: {
@@ -63,40 +66,55 @@ export default{
         this.list = result
       }, 100)
     }
-  }
+  },
+  mounted () {
+    this.scroll = new Bscroll(this.$refs.searchs)
+  },
+  computed: {
+    hasList () {
+      return !this.list.length
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      this.$store.dispatch('changeCity', city)
+      this.$router.push('/')
+    }
+  },
+
 }
 </script>
 
 <style>
-.search{
-height: .72rem;
-padding: 0.1rem;
-background: #00BCD4;
+.search {
+  height: 0.72rem;
+  padding: 0.1rem;
+  background: #00bcd4;
 }
-.search .search-input{
-height: .62rem;
-line-height: .62rem;
-width: 100%;
-text-align: center;
-border-radius: .06rem;
-color: #666;
-padding: 0.1rem;
-box-sizing: border-box;
+.search .search-input {
+  height: 0.62rem;
+  line-height: 0.62rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.06rem;
+  color: #666;
+  padding: 0.1rem;
+  box-sizing: border-box;
 }
-.search-content{
-overflow: hidden;
-width: 100%;
-position: absolute;
-top: 1.77rem;
-left: 0;
-bottom: 0;
-z-index: 999;
-background: #eee;
+.search-content {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 1.77rem;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #eee;
 }
-.searchs{
-line-height: .62rem;
-padding-left: .2rem;
-background: #fff;
-color: #666;
+.searchs {
+  line-height: 0.62rem;
+  padding-left: 0.2rem;
+  background: #fff;
+  color: #666;
 }
 </style>
